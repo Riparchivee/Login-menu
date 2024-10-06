@@ -14,9 +14,12 @@ let registerButton = document.getElementById('registerButton');
 function checkLoginStatus() {
   let isLoggedIn = localStorage.getItem('isLoggedIn');
   let username = localStorage.getItem('username');
+  let halamanIni = window.location.pathname;
   
   if (isLoggedIn === 'true' && username) {
-    window.location.href = "9At/home.html";
+      window.location.href = "9At/home.html";
+  } if (isLoggedIn === 'false' && username) {
+      window.location.href = "index.html";
   }
 }
 
